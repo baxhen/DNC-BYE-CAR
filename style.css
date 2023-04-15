@@ -18,6 +18,9 @@
   --carousel-card-price: #265e70;
   --button-learn-more-background: #4dbce9;
   --button-learn-more-color: #ffffff;
+  --modal-background: #dfdfdfe5;
+  --modal-card-background: #4dbce9bf;
+  --default-radius: 15px;
 }
 
 header {
@@ -136,4 +139,58 @@ section {
   color: var(--button-learn-more-color);
   border: none;
   border-radius: 15px;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.modal-card {
+  background-color: var(--modal-card-background);
+  padding: 40px 100px;
+  max-width: 838px;
+  border-radius: var(--default-radius);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  color: var(--carousel-card-color);
+}
+
+.modal-card h1 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.modal-card p {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 23px;
+}
+
+.modal-card > button:first-of-type {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+}
+
+.modal-card > button:last-of-type {
+  font-size: 27px;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--default-radius);
+  border: none;
+  color: var(--carousel-card-price);
 }
