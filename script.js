@@ -18,6 +18,8 @@ const modalElement = document.querySelector("#modal");
 
 let index = 0;
 
+const INTERVAL = 5000;
+
 function show(num) {
   index = index + num;
 
@@ -31,6 +33,10 @@ function show(num) {
 
   cardsElements[index].scrollIntoView({ behavior: "smooth" });
 }
+
+setInterval(() => {
+  show(+1);
+}, INTERVAL);
 
 function showModal() {
   modalElement.innerHTML = "";
